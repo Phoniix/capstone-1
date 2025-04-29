@@ -1,0 +1,112 @@
+DATE|TIME|DESCRIPTION|VENDOR|TRANSACTION
+2022-01-15|08:32|Paycheck|Personal Deposit|2500.00
+2022-01-18|12:10|Groceries|Walmart|-76.54
+2022-02-01|09:00|Paycheck|Personal Deposit|2550.00
+2022-02-10|19:45|Dinner|Olive Garden|-45.23
+2022-02-14|14:22|Valentine's Gift|Amazon|-89.99
+2022-03-01|08:55|Paycheck|Personal Deposit|2600.00
+2022-03-08|13:15|Gas|Shell Station|-42.11
+2022-03-21|18:30|Clothes|Old Navy|-120.47
+2022-04-01|09:03|Paycheck|Personal Deposit|2650.00
+2022-04-05|11:20|Coffee|Starbucks|-6.75
+2022-04-18|16:10|Utilities|City Power Co|-145.88
+2022-05-01|09:01|Paycheck|Personal Deposit|2700.00
+2022-05-03|17:40|Dinner|Buffalo Wild Wings|-53.30
+2022-05-15|10:50|Groceries|Kroger|-89.45
+2022-06-01|08:58|Paycheck|Personal Deposit|2700.00
+2022-06-08|14:05|New Phone|Best Buy|-599.99
+2022-06-20|12:45|Gas|Chevron|-39.99
+2022-07-01|09:10|Paycheck|Personal Deposit|2750.00
+2022-07-04|15:30|BBQ Supplies|HEB|-124.20
+2022-07-18|18:00|Streaming Service|Netflix|-15.49
+2022-08-01|08:57|Paycheck|Personal Deposit|2750.00
+2022-08-12|13:25|Concert Tickets|Ticketmaster|-220.00
+2022-08-21|16:10|Groceries|Aldi|-97.63
+2022-09-01|09:02|Paycheck|Personal Deposit|2800.00
+2022-09-05|12:00|Lunch|Chick-fil-A|-12.84
+2022-09-15|10:45|Oil Change|Jiffy Lube|-69.99
+2022-10-01|09:00|Paycheck|Personal Deposit|2800.00
+2022-10-13|17:15|Halloween Costume|Spirit Halloween|-75.00
+2022-10-24|15:55|Utilities|City Power Co|-142.00
+2022-11-01|09:05|Paycheck|Personal Deposit|2850.00
+2022-11-06|18:25|Groceries|Walmart|-102.45
+2022-11-23|13:15|Thanksgiving Dinner|Kroger|-156.78
+2022-12-01|08:59|Paycheck|Personal Deposit|2900.00
+2022-12-05|14:40|Christmas Gifts|Amazon|-325.00
+2022-12-20|12:30|Dinner|Texas Roadhouse|-48.25
+2023-01-01|08:45|Paycheck|Personal Deposit|2950.00
+2023-01-05|17:20|Utilities|Energy Co|-140.75
+2023-01-15|10:30|Groceries|Walmart|-87.34
+2023-02-01|09:00|Paycheck|Personal Deposit|2950.00
+2023-02-10|19:50|Valentine's Dinner|Cheesecake Factory|-115.00
+2023-02-18|13:10|Gas|Shell Station|-44.76
+2023-03-01|09:03|Paycheck|Personal Deposit|3000.00
+2023-03-07|11:30|New Shoes|Nike|-150.00
+2023-03-18|17:40|Streaming Subscription|Disney Plus|-8.99
+2023-04-01|09:01|Paycheck|Personal Deposit|3000.00
+2023-04-09|15:30|Easter Supplies|Target|-74.21
+2023-04-20|16:50|Car Wash|QuickClean|-25.00
+2023-05-01|08:56|Paycheck|Personal Deposit|3050.00
+2023-05-10|13:45|Mother’s Day Gift|Etsy|-59.00
+2023-05-22|18:05|Groceries|Aldi|-98.67
+2023-06-01|08:59|Paycheck|Personal Deposit|3050.00
+2023-06-12|12:20|Concert Tickets|StubHub|-200.00
+2023-06-25|15:15|Utilities|Water Co|-90.30
+2023-07-01|09:02|Paycheck|Personal Deposit|3100.00
+2023-07-08|17:30|Dinner|Red Lobster|-62.80
+2023-07-21|13:10|Gas|Chevron|-48.23
+2023-08-01|09:05|Paycheck|Personal Deposit|3100.00
+2023-08-16|14:35|Clothes|Old Navy|-120.55
+2023-08-27|18:45|Streaming Subscription|HBO Max|-14.99
+2023-09-01|08:57|Paycheck|Personal Deposit|3150.00
+2023-09-12|11:25|Groceries|Walmart|-92.14
+2023-09-29|17:20|Utilities|Energy Co|-138.40
+2023-10-01|09:00|Paycheck|Personal Deposit|3150.00
+2023-10-15|13:50|Halloween Decor|Home Depot|-82.00
+2023-10-28|16:05|Gas|Shell Station|-50.00
+2023-11-01|08:59|Paycheck|Personal Deposit|3200.00
+2023-11-07|18:00|Groceries|Kroger|-100.00
+2023-11-25|12:40|Black Friday Shopping|Amazon|-450.00
+2023-12-01|09:03|Paycheck|Personal Deposit|3200.00
+2023-12-08|14:55|Christmas Tree|Lowes|-79.99
+2023-12-18|16:15|Gift Shopping|Etsy|-130.20
+2024-01-01|08:55|Paycheck|Personal Deposit|3250.00
+2024-01-10|11:00|Utilities|City Water|-97.30
+2024-01-22|13:30|Groceries|Walmart|-85.49
+2024-02-01|09:00|Paycheck|Personal Deposit|3250.00
+2024-02-14|17:10|Valentine's Gift|Amazon|-69.95
+2024-02-25|18:20|Gas|Shell Station|-47.50
+2024-03-01|08:58|Paycheck|Personal Deposit|3300.00
+2024-03-09|12:25|New Laptop|Best Buy|-850.00
+2024-03-18|15:45|Streaming Service|Netflix|-15.49
+2024-04-01|09:02|Paycheck|Personal Deposit|3300.00
+2024-04-11|14:40|Easter Supplies|Target|-80.00
+2024-04-22|17:20|Utilities|Energy Co|-140.00
+2024-05-01|08:57|Paycheck|Personal Deposit|3350.00
+2024-05-05|11:30|Mother’s Day Flowers|1-800-Flowers|-55.00
+2024-05-20|16:00|Groceries|Aldi|-96.00
+2024-06-01|08:59|Paycheck|Personal Deposit|3350.00
+2024-06-14|15:10|Summer Vacation|Airbnb|-600.00
+2024-06-27|13:50|Gas|Chevron|-49.99
+2024-07-01|09:05|Paycheck|Personal Deposit|3400.00
+2024-07-12|17:00|Dinner|Texas Roadhouse|-64.80
+2024-07-29|14:20|Clothes|Old Navy|-115.25
+2024-08-01|09:01|Paycheck|Personal Deposit|3400.00
+2024-08-16|12:15|Back to School Supplies|Target|-120.50
+2024-08-24|16:10|Utilities|City Power|-145.67
+2024-09-01|08:58|Paycheck|Personal Deposit|3450.00
+2024-09-11|18:30|Groceries|Kroger|-99.99
+2024-09-30|11:50|Gas|Shell Station|-51.00
+2024-10-01|09:00|Paycheck|Personal Deposit|3450.00
+2024-10-13|15:00|Halloween Candy|Walmart|-42.90
+2024-10-25|13:40|Utilities|Energy Co|-141.20
+2024-11-01|09:02|Paycheck|Personal Deposit|3500.00
+2024-11-06|17:15|Groceries|Aldi|-94.30
+2024-11-24|12:30|Thanksgiving Dinner|HEB|-185.00
+2024-12-01|08:57|Paycheck|Personal Deposit|3500.00
+2024-12-08|15:50|Christmas Shopping|Amazon|-500.00
+2024-12-20|18:20|Gift Shopping|Etsy|-145.99
+2024-04-26|03:46:00|what da heck|Personal Deposit|123.0
+2025-04-26|03:46:49|hi mom|Personal Deposit|123.0
+2025-03-26|05:42:36|this is an example|Personal Deposit|123.0
+2025-04-27|02:19:27|Grandma gave me money|Personal Deposit|50.0
