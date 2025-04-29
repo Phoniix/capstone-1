@@ -46,11 +46,9 @@ public class AccountingLedger {
                     if (!programQuitter(makePayment)) {function = makePayment.getFunction();}
                 } else if (function == 'L') {
                     activityLogger("Opened Account Ledger Screen");
-                    while (function == 'L') {
                         ResultHelper ledger = LedgerScreen.ledgerScreen(scanner);
                         if (programQuitter(ledger)) {function = ledger.getFunction();}
                         if (!programQuitter(ledger)) {function = ledger.getFunction();}
-                    }
                 } else if (function == 'R') {
                     activityLogger("Opened Reports Screen");
                     ResultHelper reports = ReportsScreen.reportsScreen(scanner);
@@ -325,6 +323,7 @@ public class AccountingLedger {
         } // Keep Going End // ----------------------------------------------------------------------------------------
         return new ResultHelper('0', true);
     }
+
     public static ResultHelper makePayment (Scanner scanner) throws NumberFormatException, InterruptedException, IOException {
         double transactionAmnt = 0;
         boolean keepGoing = true;
@@ -541,15 +540,11 @@ public class AccountingLedger {
     }
     public static String currentBalance (Scanner scanner) throws IOException {
         double transaction = 0;
-        BufferedReader lilTim = new BufferedReader(new FileReader("transactions.csv"));
-        scanner = new Scanner(lilTim);
-        scanner.nextLine();
 
-        while (scanner.hasNextLine()) {
-            String input = scanner.nextLine();
-            String [] inputParts = input.split("\\|");
-            if (inputParts.length > 4) {
-                transaction += Double.parseDouble(inputParts[4]);
+        for (String line: allTransactions()) {
+            String [] lineParts = line.split("\\|");
+            if (lineParts.length > 4) {
+                transaction += Double.parseDouble(lineParts[4]);
             }
         }
 
