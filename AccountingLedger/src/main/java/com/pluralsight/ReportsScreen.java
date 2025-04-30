@@ -82,14 +82,10 @@ public class ReportsScreen {
                 }
             }
         }
-        if (!found) {
-            newLineTop();
-            System.out.println("No Results Found.");
-            lineBottom();
-        }
+        notFound(found);
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your (MTD) Month to Date transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
@@ -115,14 +111,10 @@ public class ReportsScreen {
                 }
             }
         }
-        if (!found) {
-            newLineTop();
-            System.out.println("No Results Found.");
-            lineBottom();
-        }
+        notFound(found);
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your (PM) Previous Month's transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
@@ -148,14 +140,10 @@ public class ReportsScreen {
                 }
             }
         }
-        if (!found) {
-            newLineTop();
-            System.out.println("No Results Found.");
-            lineBottom();
-        }
+        notFound(found);
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your (YTD) Year to Date transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
@@ -185,14 +173,10 @@ public class ReportsScreen {
                 }
             }
         }
-        if (!found) {
-            newLineTop();
-            System.out.println("No Results Found.");
-            lineBottom();
-        }
+        notFound(found);
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your (PY) Previous Year's transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
@@ -233,13 +217,9 @@ public class ReportsScreen {
                     }
                 }
             }
-            if (!found) {
-                newLineTop();
-                System.out.println("No Results Found For " + userInputInput);
-                lineBottom();
-            }
+            notFound(found);
 
-            ResultHelper changeScreen = screenChange(userInput);
+            ResultHelper changeScreen = screenChange(userInput, "Here are all of your searches matching [" + userInputInput + "].");
             if (returner(changeScreen)) {return changeScreen;}
         }
 
@@ -272,6 +252,13 @@ public class ReportsScreen {
         LocalDate targetDate = LocalDate.of(todayYear, todayMonth, todayDay);
         return targetDate;
     } //MTD & YTD Can use // ------------------------------
+    public static void notFound (boolean found) {
+        if (!found) {
+            newLineTop();
+            System.out.println("No Results Found.");
+            lineBottom();
+        }
+    }
 
 
 }

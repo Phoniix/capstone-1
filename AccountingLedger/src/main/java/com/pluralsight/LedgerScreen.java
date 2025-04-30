@@ -66,7 +66,7 @@ public class LedgerScreen {
         }
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
@@ -92,7 +92,7 @@ public class LedgerScreen {
 
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your deposit transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
@@ -117,7 +117,7 @@ public class LedgerScreen {
         }
 
         Scanner userInput = new Scanner(System.in);
-        ResultHelper changeScreen = screenChange(userInput);
+        ResultHelper changeScreen = screenChange(userInput, "Here are all of your payment transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);

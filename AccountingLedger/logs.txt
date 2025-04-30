@@ -225,3 +225,12 @@
 2025-04-30|09:58:08|App Close
 2025-04-30|09:58:16|App Launched
 2025-04-30|09:58:28|Opened Deposit Menu
+2025-04-30|10:36:17|App Launched
+2025-04-30|10:36:29|Opened Account Ledger Screen
+2025-04-30|10:36:29|Opened Ledger Screen
+2025-04-30|10:36:31|Displayed All Transactions
+2025-04-30|10:38:59|App Launched
+2025-04-30|10:39:16|Opened Account Ledger Screen
+2025-04-30|10:39:16|Opened Ledger Screen
+2025-04-30|10:39:18|Displayed All Transactions
+2025-04-30|10:47:11|App Launched

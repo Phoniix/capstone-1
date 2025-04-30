@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.pluralsight.LedgerScreen.ledgerScreen;
 import static com.pluralsight.ReportsScreen.reportsScreen;
 
 public class AccountingLedger {
@@ -48,7 +49,7 @@ public class AccountingLedger {
                     if (!programQuitter(makePayment)) {function = makePayment.getFunction();}
                 } else if (function == 'L') {
                     activityLogger("Opened Account Ledger Screen");
-                        ResultHelper ledger = LedgerScreen.ledgerScreen(scanner);
+                        ResultHelper ledger = ledgerScreen(scanner);
                         if (programQuitter(ledger)) {function = ledger.getFunction();}
                         if (!programQuitter(ledger)) {function = ledger.getFunction();}
                 } else if (function == 'R') {
@@ -143,13 +144,8 @@ public class AccountingLedger {
 
             String transactionInput = getAmount(scanner);
             ResultHelper transInput = allowUserToExitOrReturn(transactionInput); if (returner(transInput)) {return transInput;}
-
-            // If not Exit Sequence // --------------------------------------------------------------------------------
-            try {
-                transactionAmnt = Double.parseDouble(transactionInput);
-            } catch (NumberFormatException ignored) {
-                System.out.println("Please Only Enter Numbers In This Field."); continue;
-            }
+            double tranactionAMNT = convertStringToDouble(transactionInput);
+            if (tranactionAMNT == 0) {continue;}
 
             timer(750);
             boolean descDone = false;
@@ -240,7 +236,7 @@ public class AccountingLedger {
 
             } else if (userConfirm == 'N') {
                 Scanner userInput = new Scanner(System.in);
-                ResultHelper changeScreen = screenChange(userInput);
+                ResultHelper changeScreen = screenChange(userInput, "Thank you for choosing Account Ledger App");
                 if (returner(changeScreen)) {return changeScreen;}
 
             } else {
@@ -354,7 +350,7 @@ public class AccountingLedger {
 
             } else if (userConfirm == 'N') {
                 Scanner userInput = new Scanner(System.in);
-                ResultHelper changeScreen = screenChange(userInput);
+                ResultHelper changeScreen = screenChange(userInput, "Thank you for choosing Account Ledger App");
                 if (returner(changeScreen)) {return changeScreen;}
 
             } else {
@@ -571,16 +567,16 @@ public class AccountingLedger {
         }
         return userChoiceInput;
     }
-    public static ResultHelper screenChange(Scanner scanner) throws IOException, InterruptedException {
+    public static ResultHelper screenChange(Scanner scanner, String message) throws IOException, InterruptedException {
         boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
         while (!goToLedger) {
-            String userChoiceInput = MenuChange(userInput, "Here are your (MTD) Month to Date transactions!");
+            String userChoiceInput = MenuChange(userInput, message);
             ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
             char userChoice = userChoiceInput.toUpperCase().charAt(0);
 
             if (userChoice == 'L') {
-                ResultHelper ledger = LedgerScreen.ledgerScreen(userInput);
+                ResultHelper ledger = ledgerScreen(userInput);
                 if (returner(ledger)) {return ledger;}
             } else if (userChoice == '0') {
                 return new ResultHelper('0', true);
