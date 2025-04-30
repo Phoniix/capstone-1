@@ -1,14 +1,8 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import static com.pluralsight.AccountingLedger.*;
@@ -64,16 +58,13 @@ public class ReportsScreen {
                 System.out.println("Invalid Input. Please Choose From Listed Options");
             }
         }
-        return null;
+        return null; //TODO: Use for next project
     }
 
     // Functions // ---------------------------------------------------------------------------------------------------
     public static ResultHelper monthToDate (Scanner scanner) throws IOException, InterruptedException {
         LocalDate today = LocalDate.now();
-        int todayYear = today.getYear();
-        int todayMonth = today.getMonthValue();
-        int todayDay = today.getDayOfMonth();
-        LocalDate targetDate = LocalDate.of(todayYear, todayMonth, todayDay);
+        LocalDate targetDate = getTargetDate(today);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         System.out.println("\n");
@@ -97,51 +88,16 @@ public class ReportsScreen {
             lineBottom();
         }
 
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are your (MTD) month to date transactions!");
-            System.out.println(promptUser());
-            System.out.println("(R) Go Back To Reports Menu");
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            System.out.print("\n\nEnter:  ");
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            if (checkIfEmpty(userChoiceInput)) {thisFieldCantBeEmpty();continue;}
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                ResultHelper ledger = LedgerScreen.ledgerScreen(userInput);
-                if (returner(ledger)) {return ledger;}
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', true);
-            } else if (userChoice == 'R') {
-                return new ResultHelper('R', true);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
 
     public static ResultHelper previousMonth (Scanner scanner) throws IOException, InterruptedException {
         LocalDate today = LocalDate.now();
-        int todayYear = today.getYear();
-        int todayMonth = today.getMonthValue();
-        int todayDay = today.getDayOfMonth();
-        int targetMonth = todayMonth - 1;
-        int targetYear = todayYear;
-        LocalDate targetDate = null;
-        if (targetMonth == 0) { // Handles The Case of Previous Month Being December In January // --------------------
-            targetMonth = 12;
-            targetYear -= 1;
-        }
-        targetDate = LocalDate.of(targetYear, targetMonth, todayDay);
+        LocalDate targetDate = getTargetDatePreviousMonth(today);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         System.out.println("\n");
@@ -165,45 +121,16 @@ public class ReportsScreen {
             lineBottom();
         }
 
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are your (PV) previous month transactions!");
-            System.out.println(promptUser());
-            System.out.println("(R) Go Back To Reports Menu");
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            System.out.print("\n\nEnter:  ");
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            if (checkIfEmpty(userChoiceInput)) {thisFieldCantBeEmpty();continue;}
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                ResultHelper ledger = LedgerScreen.ledgerScreen(userInput);
-                if (returner(ledger)) {return ledger;}
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', true);
-            } else if (userChoice == 'R') {
-                return new ResultHelper('R', true);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
 
     public static ResultHelper yearToDate (Scanner scanner) throws IOException, InterruptedException {
         LocalDate today = LocalDate.now();
-        LocalDate firstDayOfMonth = today.withDayOfMonth(1);
-        int todayYear = today.getYear();
-        int todayMonth = today.getMonthValue();
-        int todayDay = today.getDayOfMonth();
-        LocalDate targetDate = LocalDate.of(todayYear, todayMonth, todayDay);
+        LocalDate targetDate = getTargetDate(today);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         System.out.println("\n");
@@ -227,34 +154,9 @@ public class ReportsScreen {
             lineBottom();
         }
 
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are your (YTD) year to date transactions!");
-            System.out.println(promptUser());
-            System.out.println("(R) Go Back To Reports Menu");
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            System.out.print("\n\nEnter:  ");
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            if (checkIfEmpty(userChoiceInput)) {thisFieldCantBeEmpty();continue;}
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                ResultHelper ledger = LedgerScreen.ledgerScreen(userInput);
-                if (returner(ledger)) {return ledger;}
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', true);
-            } else if (userChoice == 'R') {
-                return new ResultHelper('R', true);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
@@ -289,34 +191,9 @@ public class ReportsScreen {
             lineBottom();
         }
 
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are your (PY) previous year transactions!");
-            System.out.println(promptUser());
-            System.out.println("(R) Go Back To Reports Menu");
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            System.out.print("\n\nEnter:  ");
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            if (checkIfEmpty(userChoiceInput)) {thisFieldCantBeEmpty();continue;}
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                ResultHelper ledger = LedgerScreen.ledgerScreen(userInput);
-                if (returner(ledger)) {return ledger;}
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', true);
-            } else if (userChoice == 'R') {
-                return new ResultHelper('R', true);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
@@ -336,11 +213,11 @@ public class ReportsScreen {
             userInputInput = userInput.nextLine().trim().replaceAll("\\s+", " ");
             activityLogger("User Searched: " + userInputInput);
             if (checkIfEmpty(userInputInput)) {thisFieldCantBeEmpty();}
-            ResultHelper uii = allowUserToExitOrReturn(userInputInput);if (returner(uii)) {return uii;}
-            if (userInputInput.equalsIgnoreCase("P")) {userInputInput = "Personal";}
+
             enteredSomething = true;
         }
-
+        ResultHelper uii = allowUserToExitOrReturn(userInputInput);if (returner(uii)) {return uii;}
+        if (userInputInput.equalsIgnoreCase("P")) {userInputInput = "Personal";}
         boolean doneSearching = false;
         boolean found = false;
         while (!doneSearching) {
@@ -362,39 +239,8 @@ public class ReportsScreen {
                 lineBottom();
             }
 
-            boolean goToLedger = false;
-            while (!goToLedger) {
-                titleNewLineTop();
-                System.out.println("Here are transactions matching your search!");
-                System.out.println("You can also start another search here.");
-                System.out.println(promptUser());
-                System.out.println("(R) Go Back To Reports Menu");
-                System.out.println("(L) Go Back To Ledger Menu");
-                System.out.println("(0) Go Back To Main Menu");
-                System.out.println("(X) Exit");
-                titleLineBottom();
-                System.out.print("\n\nEnter:  ");
-                String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-                if (checkIfEmpty(userChoiceInput)) {thisFieldCantBeEmpty();continue;}
-                ResultHelper uci = allowUserToExitOrReturn(userChoiceInput);
-                if (returner(uci)) {return uci;}
-
-                char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-                if (userChoice == 'L') {
-                    ResultHelper ledger = LedgerScreen.ledgerScreen(userInput);
-                    if (returner(ledger)) {
-                        return ledger;
-                    }
-                } else if (userChoice == '0') {
-                    return new ResultHelper('0', true);
-                } else if (userChoice == 'R') {
-                    return new ResultHelper('R', true);
-                } else {
-                    userInputInput = userChoiceInput;
-                    goToLedger = true;
-                }
-            }
+            ResultHelper changeScreen = screenChange(userInput);
+            if (returner(changeScreen)) {return changeScreen;}
         }
 
         return new ResultHelper('0', true);
@@ -404,6 +250,28 @@ public class ReportsScreen {
 //    enum expectedSBAInputs {
 //        DATE, DESCRIPTION, VENDOR, AMOUNT
 //    } // TODO: use for menu option next project // -----------------------------------------
+
+    private static LocalDate getTargetDatePreviousMonth(LocalDate today) {
+        int todayYear = today.getYear();
+        int todayMonth = today.getMonthValue();
+        int todayDay = today.getDayOfMonth();
+        int targetMonth = todayMonth - 1;
+        int targetYear = todayYear;
+        LocalDate targetDate = null;
+        if (targetMonth == 0) { // Handles The Case of Previous Month Being December In January // --------------------
+            targetMonth = 12;
+            targetYear -= 1;
+        }
+        targetDate = LocalDate.of(targetYear, targetMonth, todayDay);
+        return targetDate;
+    }
+    public static LocalDate getTargetDate (LocalDate today) {
+        int todayYear = today.getYear();
+        int todayMonth = today.getMonthValue();
+        int todayDay = today.getDayOfMonth();
+        LocalDate targetDate = LocalDate.of(todayYear, todayMonth, todayDay);
+        return targetDate;
+    } //MTD & YTD Can use // ------------------------------
 
 
 }

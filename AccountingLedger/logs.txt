@@ -136,3 +136,92 @@
 2025-04-29|10:20:13|Opened Reports Screen
 2025-04-29|10:20:22|Displayed Month TO Date Transactions
 2025-04-29|10:20:26|Displayed Year To Date Transactions
+2025-04-29|04:08:49|App Launched
+2025-04-29|04:08:53|Opened Payment Menu
+2025-04-29|04:09:23|App Close
+2025-04-30|09:40:35|App Launched
+2025-04-30|09:40:39|Opened Account Ledger Screen
+2025-04-30|09:40:39|Opened Ledger Screen
+2025-04-30|09:40:39|Opened Reports Screen
+2025-04-30|09:40:41|Displayed Month TO Date Transactions
+2025-04-30|09:40:43|Returned To Main Menu
+2025-04-30|09:41:27|App Launched
+2025-04-30|09:41:30|App Launched
+2025-04-30|09:41:33|Opened Account Ledger Screen
+2025-04-30|09:41:33|Opened Ledger Screen
+2025-04-30|09:41:33|Opened Reports Screen
+2025-04-30|09:41:35|Displayed Month TO Date Transactions
+2025-04-30|09:41:38|Displayed Previous Month Transactions
+2025-04-30|09:41:42|Displayed Previous Month Transactions
+2025-04-30|09:41:45|Displayed Previous Year Transactions
+2025-04-30|09:41:53|Opened Search By Vendor Screen
+2025-04-30|09:41:56|User Searched: d
+2025-04-30|09:42:07|Returned To Ledger Menu From Reports Screen
+2025-04-30|09:42:07|Opened Ledger Screen
+2025-04-30|09:42:09|Opened Reports Screen
+2025-04-30|09:42:10|Displayed Month TO Date Transactions
+2025-04-30|09:42:12|Opened Ledger Screen
+2025-04-30|09:42:14|Opened Reports Screen
+2025-04-30|09:42:15|Displayed Previous Month Transactions
+2025-04-30|09:42:17|Opened Ledger Screen
+2025-04-30|09:42:18|Opened Reports Screen
+2025-04-30|09:42:19|Displayed Year To Date Transactions
+2025-04-30|09:42:21|Opened Ledger Screen
+2025-04-30|09:42:23|Opened Reports Screen
+2025-04-30|09:42:24|Displayed Previous Year Transactions
+2025-04-30|09:42:30|Opened Ledger Screen
+2025-04-30|09:42:30|Opened Reports Screen
+2025-04-30|09:42:31|Opened Search By Vendor Screen
+2025-04-30|09:42:35|User Searched: r
+2025-04-30|09:42:48|Opened Ledger Screen
+2025-04-30|09:42:51|Opened Reports Screen
+2025-04-30|09:42:57|Displayed Month TO Date Transactions
+2025-04-30|09:42:59|Returned To Main Menu
+2025-04-30|09:43:01|Opened Account Ledger Screen
+2025-04-30|09:43:01|Opened Ledger Screen
+2025-04-30|09:43:01|Opened Reports Screen
+2025-04-30|09:43:02|Displayed Previous Month Transactions
+2025-04-30|09:43:05|Returned To Main Menu
+2025-04-30|09:43:06|Opened Account Ledger Screen
+2025-04-30|09:43:06|Opened Ledger Screen
+2025-04-30|09:43:07|Opened Reports Screen
+2025-04-30|09:43:08|Displayed Year To Date Transactions
+2025-04-30|09:43:10|Returned To Main Menu
+2025-04-30|09:43:11|Opened Account Ledger Screen
+2025-04-30|09:43:11|Opened Ledger Screen
+2025-04-30|09:43:12|Opened Reports Screen
+2025-04-30|09:43:13|Displayed Previous Year Transactions
+2025-04-30|09:43:19|Returned To Main Menu
+2025-04-30|09:43:21|Opened Account Ledger Screen
+2025-04-30|09:43:21|Opened Ledger Screen
+2025-04-30|09:43:21|Opened Reports Screen
+2025-04-30|09:43:22|Opened Search By Vendor Screen
+2025-04-30|09:43:24|User Searched: a
+2025-04-30|09:43:45|Returned To Main Menu
+2025-04-30|09:50:26|App Launched
+2025-04-30|09:50:29|Opened Account Ledger Screen
+2025-04-30|09:50:29|Opened Ledger Screen
+2025-04-30|09:50:29|Opened Reports Screen
+2025-04-30|09:50:30|Displayed Month TO Date Transactions
+2025-04-30|09:50:33|Displayed Month TO Date Transactions
+2025-04-30|09:50:35|Opened Ledger Screen
+2025-04-30|09:50:37|Opened Reports Screen
+2025-04-30|09:50:37|Displayed Month TO Date Transactions
+2025-04-30|09:50:40|Returned To Main Menu
+2025-04-30|09:50:41|Opened Account Ledger Screen
+2025-04-30|09:50:41|Opened Ledger Screen
+2025-04-30|09:50:42|Opened Reports Screen
+2025-04-30|09:50:43|Displayed Month TO Date Transactions
+2025-04-30|09:50:44|App Close
+2025-04-30|09:57:01|App Launched
+2025-04-30|09:57:10|Opened Account Ledger Screen
+2025-04-30|09:57:10|Opened Ledger Screen
+2025-04-30|09:57:12|Displayed All Transactions
+2025-04-30|09:57:37|Returned To Ledger Menu From Reports Screen
+2025-04-30|09:57:37|Opened Ledger Screen
+2025-04-30|09:57:40|Displayed All Transactions
+2025-04-30|09:57:55|Opened Ledger Screen
+2025-04-30|09:58:05|Opened Reports Screen
+2025-04-30|09:58:08|App Close
+2025-04-30|09:58:16|App Launched
+2025-04-30|09:58:28|Opened Deposit Menu

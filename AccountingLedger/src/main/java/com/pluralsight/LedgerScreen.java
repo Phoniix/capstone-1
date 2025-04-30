@@ -65,28 +65,9 @@ public class LedgerScreen {
             lineBottom();
         }
 
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are all of your recent transactions!");
-            System.out.println(promptUser());
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                return new ResultHelper('L', false);
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', false);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
@@ -110,28 +91,9 @@ public class LedgerScreen {
         }
 
 
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are all of your recent deposits!");
-            System.out.println(promptUser());
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                return new ResultHelper('L', false);
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', false);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
@@ -154,30 +116,12 @@ public class LedgerScreen {
             }
         }
 
-
-        boolean goToLedger = false;
         Scanner userInput = new Scanner(System.in);
-        while (!goToLedger) {
-            titleNewLineTop();
-            System.out.println("Here are all of your recent payments!");
-            System.out.println(promptUser());
-            System.out.println("(L) Go Back To Ledger Menu");
-            System.out.println("(0) Go Back To Main Menu");
-            System.out.println("(X) Exit");
-            titleLineBottom();
-            String userChoiceInput = userInput.nextLine().trim().replaceAll("\\s+", "");
-            ResultHelper uci = allowUserToExitOrReturn(userChoiceInput); if (returner(uci)) {return uci;}
-            char userChoice = userChoiceInput.toUpperCase().charAt(0);
-
-            if (userChoice == 'L') {
-                return new ResultHelper('L', false);
-            } else if (userChoice == '0') {
-                return new ResultHelper('0', false);
-            } else {
-                System.out.println("\nInvalid Input. Please choose from listed options.");
-            }
-        }
+        ResultHelper changeScreen = screenChange(userInput);
+        if (returner(changeScreen)) {return changeScreen;}
 
         return new ResultHelper('0', true);
     }
+
+    //Back End // -----------------------------------------------------------------------------------------------------
 }
