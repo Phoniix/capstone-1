@@ -63,7 +63,7 @@ public class AccountingLedger {
                     System.out.println("\nInvalid Input. CHECK");
                 }
             if (function == 'X') {
-                activityLogger("App Close");
+                activityLogger("App Close By User");
                 exitSequence();
                 keepGoing = false;
             }
@@ -144,8 +144,8 @@ public class AccountingLedger {
 
             String transactionInput = getAmount(scanner);
             ResultHelper transInput = allowUserToExitOrReturn(transactionInput); if (returner(transInput)) {return transInput;}
-            double tranactionAMNT = convertStringToDouble(transactionInput);
-            if (tranactionAMNT == 0) {continue;}
+            double transactionAMNT = convertStringToDouble(transactionInput);
+            if (transactionAMNT == 0) {continue;}
 
             timer(750);
             boolean descDone = false;
@@ -225,6 +225,7 @@ public class AccountingLedger {
             } // TC Loop End // ---------------------------------------------------------------------------------------
 
             transactionLogger(transactionAmnt, finalDesc, vendor);
+            activityLogger("User Made Deposit Of: $" + transactionAMNT + " For: " + finalDesc + " Vendor: " + vendor);
             timer1500();
             char userConfirm = newTransaction(scanner);
 
@@ -324,7 +325,6 @@ public class AccountingLedger {
                             } else {
                                 vendor = autoCapitalizeFirstLetter(vendorInput);
                             }
-
                             break;
                         } else if (pickPart == '4') {
                             break;
@@ -340,6 +340,7 @@ public class AccountingLedger {
             } // TC Loop End // ---------------------------------------------------------------------------------------
 
             transactionLogger(-1*(transactionAmnt), finalDesc, vendor);
+            activityLogger("User Made Payment Of: $" + transactionAmnt + " For: " + finalDesc + " Vendor: " + vendor);
             char userConfirm = newTransaction(scanner);
 
             if (userConfirm == 'Y') {

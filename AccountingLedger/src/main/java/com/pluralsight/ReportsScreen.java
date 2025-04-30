@@ -11,6 +11,7 @@ public class ReportsScreen {
 
     public static ResultHelper reportsScreen (Scanner scanner) throws IOException, InterruptedException {
         boolean keepGoing = true;
+        activityLogger("Opened Reports Screen");
         while (keepGoing) {
             titleNewLineTop();
             System.out.println("Welcome To Your Account Ledger Reporting\n" +
@@ -31,7 +32,7 @@ public class ReportsScreen {
             char userSelection = userSelectionInput.toUpperCase().charAt(0);
 
             if (userSelection == '1') {
-                activityLogger("Displayed Month TO Date Transactions");
+                activityLogger("Displayed Month To Date Transactions");
                 ResultHelper mtd = monthToDate(scanner);
                if (returner(mtd)) {return mtd;}
             } else if (userSelection == '2') {
