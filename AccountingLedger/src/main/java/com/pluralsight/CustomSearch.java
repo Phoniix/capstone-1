@@ -72,63 +72,13 @@ public class CustomSearch {
                     (!doubleLog(transactionAMNT).isEmpty() ? "[" + transactionAMNT + "]" : "") +
                     " as parameter(s).");
 
-            boolean found = false;
-            for (String line : allTransactions()) {
-                boolean hideTransaction = true;
+            searchLoop(startDate, endDate, description, vendor, transactionAMNT); // Searches based on user selected inputted parameters
 
-                String [] lineParts = line.split("\\|");
-                if (lineParts.length >= 5) {
-                    LocalDate fileDate = convertStringToDate(lineParts[0]);
-                    String fileDescription = lineParts[2];
-                    String fileVendor = lineParts[3];
-                    double fileAMNT = Double.parseDouble(lineParts[4]);
-                    double targetAMNT = Math.abs(transactionAMNT) - Math.abs(fileAMNT);
-                    if (startDate != null && fileDate.isBefore(startDate)) {
-                        hideTransaction = false;
-                    } if (endDate != null && fileDate.isAfter(endDate)) {
-                        hideTransaction = false;
-                    } if (!description.isEmpty() && !fileDescription.toLowerCase().contains(description.toLowerCase())) {
-                        hideTransaction = false;
-                    } if (!vendor.isEmpty() && !fileVendor.toLowerCase().contains(vendor.toLowerCase())) {
-                        hideTransaction = false;
-                    } if (transactionAMNT != 0 && fileAMNT == transactionAMNT) {
-                        if (fileAMNT < 0)
-                        hideTransaction = false;
-                    } if (hideTransaction) {
-                        System.out.println(line);
-                        lineBottom();
-                        found = true;
-                    }
-                }
-            }
-            if (!found) {
-                newLineTop();
-                System.out.println("No results found.");
-                titleNewLineTop();
-            }
-
-            boolean searchAgainConfirm = false;
-            while (!searchAgainConfirm) {
-                titleNewLineTop();
-                System.out.println("Would you like to search again? (Y) or (N)\n" +
-                        promptUser());
-                titleLineBottom();
-                System.out.print("Enter:  ");
-                String searchAgain = scanner.nextLine().trim().replaceAll("\\s+", "");
-                ResultHelper sa = allowUserToExitOrReturn(searchAgain); if (returner(sa)) {return sa;}
-                char userConfirm = searchAgain.toUpperCase().charAt(0);
-
-                if (userConfirm == 'Y') {
-                    System.out.println("Setting up next search...");
-                    timer(750);
-                    searchAgainConfirm = true;
-                    continue;
-                } else if (userConfirm == 'N') {
-                    screenChange(scanner, "Thank you for using Account Ledger Custom Search");
-                    break;
-                } else {
-                    System.out.println("Invalid Input. Please choose from listed options.");
-                }
+            keepGoing = askUserToSearchAgain(scanner);
+            if (keepGoing) {activityLogger("User started another search."); continue;}
+            if (!keepGoing) {
+                ResultHelper lastCall = screenChange(scanner, "Thank you for using account Ledger App!");
+                if (returner(lastCall)) {return lastCall;}
             }
         }
         return null; //TODO: Use for next project
@@ -158,7 +108,7 @@ public class CustomSearch {
             System.out.println("What is your " + message + "?\n" +
                     "Transactions " + action + " will be displayed.");
             titleLineBottom();
-            System.out.print("Enter:  ");
+            System.out.print("\n\nEnter:  ");
             userInput = scanner.nextLine().trim().replaceAll("\\s+", "");
             if (checkIfEmpty(userInput)) {thisFieldCantBeEmpty();continue;}
             somethingEntered = true;
@@ -237,5 +187,74 @@ public class CustomSearch {
             transactionAMNTEntered = true;
         }
         return Double.parseDouble(transactionAMNTInput);
+    }
+    public static boolean askUserToSearchAgain (Scanner scanner) throws InterruptedException, IOException {
+        boolean searchAgainConfirm = false;
+        while (!searchAgainConfirm) {
+            titleNewLineTop();
+            System.out.println("Would you like to search again? (Y) or (N)");
+            titleLineBottom();
+            System.out.print("Enter:  ");
+            String searchAgain = scanner.nextLine().trim().replaceAll("\\s+", "");
+            ResultHelper sa = allowUserToExitOrReturn(searchAgain); if (returner(sa)) {return false;}
+            char userConfirm = searchAgain.toUpperCase().charAt(0);
+
+            if (userConfirm == 'Y') {
+                System.out.println("Setting up next search...");
+                timer(750);
+                searchAgainConfirm = true;
+                return true;
+            } else if (userConfirm == 'N') {
+                return false;
+            } else {
+                System.out.println("Invalid Input. Please choose from listed options.");
+            }
+        }
+        return false;
+    }
+    public static void searchLoop (LocalDate startDate, LocalDate endDate, String description, String vendor, double transactionAMNT) throws InterruptedException, IOException {
+        boolean found = false;
+        int lineCounter = 0;
+        System.out.println();
+        for (String line : allTransactions()) {
+            boolean showTransaction = true;
+
+            String [] lineParts = line.split("\\|");
+            if (lineParts.length >= 5) {
+                LocalDate fileDate = convertStringToDate(lineParts[0]);
+                String fileDescription = lineParts[2];
+                String fileVendor = lineParts[3];
+                double fileAMNT = Double.parseDouble(lineParts[4]);
+                if (startDate != null && fileDate.isBefore(startDate)) {
+                    showTransaction = false;
+                } if (endDate != null && fileDate.isAfter(endDate)) {
+                    showTransaction = false;
+                } if (!description.isEmpty() && !fileDescription.toLowerCase().contains(description.toLowerCase())) {
+                    showTransaction = false;
+                } if (!vendor.isEmpty() && !fileVendor.toLowerCase().contains(vendor.toLowerCase())) {
+                    showTransaction = false;
+                } if (transactionAMNT != 0 && fileAMNT != transactionAMNT && fileAMNT != (-1 * transactionAMNT)) {
+                    showTransaction = false;
+                } if (showTransaction) {
+                    System.out.println(line);
+                    lineBottom();
+                    found = true;
+                    lineCounter += 1;
+                }
+            }
+        }
+        if (found) {
+            activityLogger("Displayed [" + lineCounter + "] from parameters");
+            titleNewLineTop();
+            System.out.println("We found searches matching your input!");
+            titleLineBottom();
+        }
+
+        if (!found) {
+            newLineTop();
+            System.out.println("No results found.");
+            activityLogger("No results found for parameters.");
+            titleNewLineTop();
+        }
     }
 }
