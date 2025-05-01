@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import static com.pluralsight.AccountingLedger.*;
+import static com.pluralsight.CustomSearch.customSearch;
 
 public class ReportsScreen {
 
@@ -21,6 +22,7 @@ public class ReportsScreen {
                     "(3) [YTD] Year To Date Transactions\n" +
                     "(4) [PY] Previous Year Transactions\n" +
                     "(5) [SBV] Search By Vendor\n" +
+                    "(6) Custom Search\n\n" +
                     "(L) Return To Ledger Screen\n" +
                     "(0) Return To Main Menu\n" +
                     "(X) Exit Program");
@@ -51,7 +53,11 @@ public class ReportsScreen {
                 activityLogger("Opened Search By Vendor Screen");
                 ResultHelper sbv = searchByVendor(scanner);
                 if (returner(sbv)) {return sbv;}
-            }  else if (userSelection == 'L') {
+            } else if (userSelection == '6') {
+                activityLogger("Opened Custom Search Screen");
+                ResultHelper cs = customSearch(scanner);
+                if (returner(cs)) {return cs;}
+            } else if (userSelection == 'L') {
                 activityLogger("Returned To Ledger Menu From Reports Screen");
                 ResultHelper ledger = LedgerScreen.ledgerScreen(scanner);
                 if (returner(ledger)) {return ledger;}

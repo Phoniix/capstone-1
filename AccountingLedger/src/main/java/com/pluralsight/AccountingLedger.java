@@ -58,7 +58,7 @@ public class AccountingLedger {
                     if (programQuitter(reports)) {function = reports.getFunction();}
                     if (!programQuitter(reports)) {function = reports.getFunction();}
                 } else if (function == 'X') {
-                    exitSequence();
+
                 } else {
                     System.out.println("\nInvalid Input. CHECK");
                 }
@@ -82,7 +82,7 @@ public class AccountingLedger {
             System.out.println("Welcome User! Use Account Ledger App to monitor and make transactions!\n" +
                     "What Service do you need today?\n\n" +
                     "(D) Make Deposit\n" +
-                    "(P) Make Payment\n" +
+                    "(P) Make Payment\n\n" +
                     "(L) Open Ledger to View & Manage\n" +
                     "(X) Exit App");
             titleLineBottom();
@@ -108,7 +108,7 @@ public class AccountingLedger {
             System.out.println("Use Account Ledger App to monitor and make transactions!\n" +
                     "What Service do you need today?\n\n" +
                     "(D) Make Deposit\n" +
-                    "(P) Make Payment\n" +
+                    "(P) Make Payment\n\n" +
                     "(L) Open Ledger to View & Manage\n" +
                     "(X) Exit App");
             titleLineBottom();
@@ -407,7 +407,7 @@ public class AccountingLedger {
     }
     public static ResultHelper allowUserToExitOrReturn (String input) throws NumberFormatException {
         boolean keepGoing = true;
-        input = input.trim().replaceAll("\\s+", " ");
+        input = input.trim().replaceAll("\\s+", "");
         char function = input.toUpperCase().charAt(0);
         if (function == '0') {keepGoing = true;}
         if (function == 'X') {keepGoing = false;}
@@ -648,7 +648,6 @@ public class AccountingLedger {
     }
     public static String promptUser () {
         return "You can also enter (0) to return to menu, or (X) to exit app.";
-
     }
     public static String autoLineBreakAt100UpTo300 (String input) {
         String returnInput = "";
@@ -676,5 +675,15 @@ public class AccountingLedger {
         System.out.println("This Field Cannot Be Empty!");
     }
 
+    // Next project //
+    // USE A FREAKING PROJECT BOARD
+    // Make whole menu into one or more methods // more specifically the return to menu call // I like----
+    //---- the methods as the class head, until otherwise not needed.
+    // Make more methods, think ahead
+    // Use more classes for items that need it (things that can rely on mulitple factors)
+    // Use T.O.D.O's
+    // Try Enums for menu's
+    // Always use an activity logger
+    // Make an importable design utility class
 
 }

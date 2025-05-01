@@ -240,3 +240,422 @@
 2025-04-30|12:00:28|App Launched
 2025-04-30|12:00:31|Opened Deposit Menu
 2025-04-30|12:00:32|App Close
+2025-04-30|01:11:50|App Launched
+2025-04-30|01:12:20|App Close By User
+2025-04-30|03:21:28|App Launched
+2025-04-30|03:21:31|Opened Account Ledger Screen
+2025-04-30|03:21:31|Opened Ledger Screen
+2025-04-30|03:21:58|Opened Reports Screen
+2025-04-30|03:21:58|Opened Reports Screen
+2025-04-30|03:21:59|Opened Custom Search Screen
+2025-04-30|03:21:59|Opened Reports Screen
+2025-04-30|03:22:11|Opened Reports Screen
+2025-04-30|03:22:15|Opened Custom Search Screen
+2025-04-30|03:22:15|Opened Reports Screen
+2025-04-30|03:22:16|Returned To Ledger Menu From Custom Search Screen
+2025-04-30|03:22:16|Opened Ledger Screen
+2025-04-30|03:22:23|Opened Reports Screen
+2025-04-30|03:22:23|Opened Reports Screen
+2025-04-30|03:22:23|Opened Custom Search Screen
+2025-04-30|03:22:23|Opened Reports Screen
+2025-04-30|03:22:26|Returned To Main Menu
+2025-04-30|03:22:42|App Close By User
+2025-04-30|03:23:04|App Launched
+2025-04-30|03:23:07|Opened Account Ledger Screen
+2025-04-30|03:23:07|Opened Ledger Screen
+2025-04-30|03:23:08|Opened Reports Screen
+2025-04-30|03:23:08|Opened Reports Screen
+2025-04-30|03:23:09|Opened Custom Search Screen
+2025-04-30|03:23:09|Opened Reports Screen
+2025-04-30|03:23:10|App Close By User
+2025-04-30|03:23:16|App Launched
+2025-04-30|03:23:18|Opened Account Ledger Screen
+2025-04-30|03:23:18|Opened Ledger Screen
+2025-04-30|03:23:18|Opened Reports Screen
+2025-04-30|03:23:18|Opened Reports Screen
+2025-04-30|03:23:19|Opened Custom Search Screen
+2025-04-30|03:23:19|Opened Reports Screen
+2025-04-30|03:23:23|Opened Reports Screen
+2025-04-30|03:23:25|Opened Custom Search Screen
+2025-04-30|03:23:25|Opened Reports Screen
+2025-04-30|03:23:26|Returned To Ledger Menu From Custom Search Screen
+2025-04-30|03:23:26|Opened Ledger Screen
+2025-04-30|03:23:27|Opened Reports Screen
+2025-04-30|03:23:27|Opened Reports Screen
+2025-04-30|03:23:28|Opened Custom Search Screen
+2025-04-30|03:23:28|Opened Reports Screen
+2025-04-30|03:23:32|Returned To Main Menu
+2025-04-30|03:23:34|App Close By User
+2025-04-30|03:23:57|App Launched
+2025-04-30|03:23:58|Opened Account Ledger Screen
+2025-04-30|03:23:58|Opened Ledger Screen
+2025-04-30|03:23:59|Opened Reports Screen
+2025-04-30|03:23:59|Opened Reports Screen
+2025-04-30|03:24:01|Opened Custom Search Screen
+2025-04-30|03:24:01|Opened Reports Screen
+2025-04-30|03:24:02|Returned To Main Menu
+2025-04-30|03:24:05|App Close By User
+2025-04-30|03:24:18|App Launched
+2025-04-30|03:24:20|Opened Account Ledger Screen
+2025-04-30|03:24:20|Opened Ledger Screen
+2025-04-30|03:24:21|Returned To Main Menu
+2025-04-30|03:24:23|App Close By User
+2025-04-30|03:24:55|App Launched
+2025-04-30|03:24:58|Opened Account Ledger Screen
+2025-04-30|03:24:58|Opened Ledger Screen
+2025-04-30|03:24:59|Opened Reports Screen
+2025-04-30|03:24:59|Opened Reports Screen
+2025-04-30|03:24:59|Opened Custom Search Screen
+2025-04-30|03:24:59|Opened Reports Screen
+2025-04-30|03:25:00|Returned To Main Menu
+2025-04-30|03:25:02|App Close By User
+2025-04-30|03:25:30|App Launched
+2025-04-30|03:25:32|Opened Account Ledger Screen
+2025-04-30|03:25:32|Opened Ledger Screen
+2025-04-30|03:25:33|Opened Reports Screen
+2025-04-30|03:25:33|Opened Reports Screen
+2025-04-30|03:25:33|Opened Custom Search Screen
+2025-04-30|03:25:33|Opened Reports Screen
+2025-04-30|03:25:35|Returned To Main Menu
+2025-04-30|03:25:35|App Close By User
+2025-04-30|06:56:28|App Launched
+2025-04-30|06:56:30|Opened Account Ledger Screen
+2025-04-30|06:56:30|Opened Ledger Screen
+2025-04-30|06:56:30|Opened Reports Screen
+2025-04-30|06:56:31|Opened Reports Screen
+2025-04-30|06:56:31|Opened Custom Search Screen
+2025-04-30|06:56:31|Opened Custom Search Function
+2025-04-30|06:58:41|App Launched
+2025-04-30|06:58:43|Opened Account Ledger Screen
+2025-04-30|06:58:43|Opened Ledger Screen
+2025-04-30|06:58:44|Opened Reports Screen
+2025-04-30|06:58:44|Opened Reports Screen
+2025-04-30|06:58:44|Opened Custom Search Screen
+2025-04-30|06:58:44|Opened Custom Search Function
+2025-04-30|07:02:20|App Launched
+2025-04-30|07:02:23|Opened Account Ledger Screen
+2025-04-30|07:02:23|Opened Ledger Screen
+2025-04-30|07:02:23|Opened Reports Screen
+2025-04-30|07:02:23|Opened Reports Screen
+2025-04-30|07:02:24|Opened Custom Search Screen
+2025-04-30|07:02:24|Opened Custom Search Function
+2025-04-30|07:06:51|App Launched
+2025-04-30|07:13:34|App Launched
+2025-04-30|07:13:37|Opened Account Ledger Screen
+2025-04-30|07:13:37|Opened Ledger Screen
+2025-04-30|07:13:37|Opened Reports Screen
+2025-04-30|07:13:37|Opened Reports Screen
+2025-04-30|07:13:38|Opened Custom Search Screen
+2025-04-30|07:13:38|Opened Custom Search Function
+2025-04-30|07:14:58|App Launched
+2025-04-30|07:15:01|Opened Account Ledger Screen
+2025-04-30|07:15:01|Opened Ledger Screen
+2025-04-30|07:15:01|Opened Reports Screen
+2025-04-30|07:15:01|Opened Reports Screen
+2025-04-30|07:15:03|Opened Custom Search Screen
+2025-04-30|07:15:03|Opened Custom Search Function
+2025-04-30|07:18:13|App Launched
+2025-04-30|07:18:16|Opened Account Ledger Screen
+2025-04-30|07:18:16|Opened Ledger Screen
+2025-04-30|07:18:16|Opened Reports Screen
+2025-04-30|07:18:16|Opened Reports Screen
+2025-04-30|07:18:18|Opened Custom Search Screen
+2025-04-30|07:18:18|Opened Custom Search Function
+2025-04-30|07:19:50|App Launched
+2025-04-30|07:19:53|Opened Account Ledger Screen
+2025-04-30|07:19:53|Opened Ledger Screen
+2025-04-30|07:19:53|Opened Reports Screen
+2025-04-30|07:19:53|Opened Reports Screen
+2025-04-30|07:19:54|Opened Custom Search Screen
+2025-04-30|07:19:54|Opened Custom Search Function
+2025-04-30|07:22:25|App Launched
+2025-04-30|07:22:33|Opened Account Ledger Screen
+2025-04-30|07:22:33|Opened Ledger Screen
+2025-04-30|07:22:34|Opened Reports Screen
+2025-04-30|07:22:34|Opened Reports Screen
+2025-04-30|07:22:36|Opened Custom Search Screen
+2025-04-30|07:22:36|Opened Custom Search Function
+2025-04-30|07:22:50|App Launched
+2025-04-30|07:22:51|Opened Account Ledger Screen
+2025-04-30|07:22:51|Opened Ledger Screen
+2025-04-30|07:22:51|Opened Reports Screen
+2025-04-30|07:22:51|Opened Reports Screen
+2025-04-30|07:22:52|Opened Custom Search Screen
+2025-04-30|07:22:52|Opened Custom Search Function
+2025-04-30|07:23:09|App Launched
+2025-04-30|07:23:13|Opened Account Ledger Screen
+2025-04-30|07:23:13|Opened Ledger Screen
+2025-04-30|07:23:14|Opened Reports Screen
+2025-04-30|07:23:14|Opened Reports Screen
+2025-04-30|07:23:15|Opened Custom Search Screen
+2025-04-30|07:23:15|Opened Custom Search Function
+2025-04-30|07:24:51|App Launched
+2025-04-30|07:24:53|Opened Account Ledger Screen
+2025-04-30|07:24:53|Opened Ledger Screen
+2025-04-30|07:24:53|Opened Reports Screen
+2025-04-30|07:24:53|Opened Reports Screen
+2025-04-30|07:24:53|Opened Custom Search Screen
+2025-04-30|07:24:53|Opened Custom Search Function
+2025-04-30|07:27:11|App Launched
+2025-04-30|07:27:13|Opened Account Ledger Screen
+2025-04-30|07:27:13|Opened Ledger Screen
+2025-04-30|07:27:14|Opened Reports Screen
+2025-04-30|07:27:14|Opened Reports Screen
+2025-04-30|07:27:14|Opened Custom Search Screen
+2025-04-30|07:27:14|Opened Custom Search Function
+2025-04-30|07:27:47|App Launched
+2025-04-30|07:27:48|Opened Account Ledger Screen
+2025-04-30|07:27:48|Opened Ledger Screen
+2025-04-30|07:27:48|Opened Reports Screen
+2025-04-30|07:27:48|Opened Reports Screen
+2025-04-30|07:27:48|Opened Custom Search Screen
+2025-04-30|07:27:48|Opened Custom Search Function
+2025-04-30|07:27:54|User requested transactions with: [2022-01-01],  as parameter(s).
+2025-04-30|07:28:25|App Launched
+2025-04-30|07:28:28|Opened Account Ledger Screen
+2025-04-30|07:28:28|Opened Ledger Screen
+2025-04-30|07:28:28|Opened Reports Screen
+2025-04-30|07:28:28|Opened Reports Screen
+2025-04-30|07:28:29|Opened Custom Search Screen
+2025-04-30|07:28:29|Opened Custom Search Function
+2025-04-30|07:29:13|User requested transactions with: [2022-01-01], [2025-04-29], [O], [O], [3400.0] as parameter(s).
+2025-04-30|07:30:06|App Launched
+2025-04-30|07:30:13|Opened Account Ledger Screen
+2025-04-30|07:30:13|Opened Ledger Screen
+2025-04-30|07:30:14|Opened Reports Screen
+2025-04-30|07:30:14|Opened Reports Screen
+2025-04-30|07:30:16|Opened Custom Search Screen
+2025-04-30|07:30:16|Opened Custom Search Function
+2025-04-30|07:30:31|User requested transactions with: [2500.0] as parameter(s).
+2025-04-30|07:30:52|User requested transactions with: [2022-01-01],  as parameter(s).
+2025-04-30|07:31:40|User requested transactions with: [2022-04-05], [O], [12.0] as parameter(s).
+2025-04-30|07:31:49|User requested transactions with: [2022-01-05],  as parameter(s).
+2025-04-30|07:33:39|Returned To Main Menu
+2025-04-30|07:33:42|Opened Account Ledger Screen
+2025-04-30|07:33:42|Opened Ledger Screen
+2025-04-30|07:33:43|Opened Reports Screen
+2025-04-30|07:33:43|Opened Reports Screen
+2025-04-30|07:33:44|Opened Custom Search Screen
+2025-04-30|07:33:44|Opened Custom Search Function
+2025-04-30|07:33:57|User requested transactions with: [2022-04-30],  as parameter(s).
+2025-04-30|07:35:14|App Launched
+2025-04-30|07:35:16|Opened Account Ledger Screen
+2025-04-30|07:35:16|Opened Ledger Screen
+2025-04-30|07:35:17|Opened Reports Screen
+2025-04-30|07:35:17|Opened Reports Screen
+2025-04-30|07:35:18|Opened Custom Search Screen
+2025-04-30|07:35:18|Opened Custom Search Function
+2025-04-30|07:35:25|User requested transactions with: [Paycheck],  as parameter(s).
+2025-04-30|07:35:43|User requested transactions with: [Personal],  as parameter(s).
+2025-04-30|07:35:59|User requested transactions with: [O],  as parameter(s).
+2025-04-30|07:36:08|User requested transactions with: [40.0] as parameter(s).
+2025-04-30|07:36:54|App Launched
+2025-04-30|07:36:57|Opened Account Ledger Screen
+2025-04-30|07:36:57|Opened Ledger Screen
+2025-04-30|07:36:58|Opened Reports Screen
+2025-04-30|07:36:58|Opened Reports Screen
+2025-04-30|07:36:58|Opened Custom Search Screen
+2025-04-30|07:36:58|Opened Custom Search Function
+2025-04-30|07:37:09|App Launched
+2025-04-30|07:37:11|Opened Account Ledger Screen
+2025-04-30|07:37:11|Opened Ledger Screen
+2025-04-30|07:37:11|Opened Reports Screen
+2025-04-30|07:37:11|Opened Reports Screen
+2025-04-30|07:37:14|Opened Custom Search Screen
+2025-04-30|07:37:14|Opened Custom Search Function
+2025-04-30|07:37:21|User requested transactions with: [2500.0] as parameter(s).
+2025-04-30|07:37:39|User requested transactions with: [120.0] as parameter(s).
+2025-04-30|07:38:05|User requested transactions with: [55.0] as parameter(s).
+2025-04-30|07:39:51|App Launched
+2025-04-30|07:39:54|Opened Account Ledger Screen
+2025-04-30|07:39:54|Opened Ledger Screen
+2025-04-30|07:39:55|Opened Reports Screen
+2025-04-30|07:39:55|Opened Reports Screen
+2025-04-30|07:39:55|Opened Custom Search Screen
+2025-04-30|07:39:55|Opened Custom Search Function
+2025-04-30|07:40:02|User requested transactions with: [40.0] as parameter(s).
+2025-04-30|07:42:57|App Launched
+2025-04-30|07:42:59|Opened Account Ledger Screen
+2025-04-30|07:42:59|Opened Ledger Screen
+2025-04-30|07:43:00|Opened Reports Screen
+2025-04-30|07:43:00|Opened Reports Screen
+2025-04-30|07:43:00|Opened Custom Search Screen
+2025-04-30|07:43:00|Opened Custom Search Function
+2025-04-30|07:43:03|User requested transactions with: [30.0] as parameter(s).
+2025-04-30|07:43:50|User requested transactions with: [2400.0] as parameter(s).
+2025-04-30|07:45:48|App Launched
+2025-04-30|07:45:50|Opened Account Ledger Screen
+2025-04-30|07:45:50|Opened Ledger Screen
+2025-04-30|07:45:51|Opened Reports Screen
+2025-04-30|07:45:51|Opened Reports Screen
+2025-04-30|07:45:51|Opened Custom Search Screen
+2025-04-30|07:45:51|Opened Custom Search Function
+2025-04-30|07:45:54|User requested transactions with: [30.0] as parameter(s).
+2025-04-30|07:46:12|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|07:46:59|App Launched
+2025-04-30|07:47:01|Opened Account Ledger Screen
+2025-04-30|07:47:01|Opened Ledger Screen
+2025-04-30|07:47:01|Opened Reports Screen
+2025-04-30|07:47:01|Opened Reports Screen
+2025-04-30|07:47:02|Opened Search By Vendor Screen
+2025-04-30|07:47:07|User Searched: -30
+2025-04-30|07:47:16|Opened Reports Screen
+2025-04-30|07:47:18|Opened Custom Search Screen
+2025-04-30|07:47:18|Opened Custom Search Function
+2025-04-30|07:47:25|User requested transactions with: [-45.0] as parameter(s).
+2025-04-30|07:49:04|App Launched
+2025-04-30|07:49:05|Opened Account Ledger Screen
+2025-04-30|07:49:05|Opened Ledger Screen
+2025-04-30|07:49:06|Opened Reports Screen
+2025-04-30|07:49:06|Opened Reports Screen
+2025-04-30|07:49:06|Opened Custom Search Screen
+2025-04-30|07:49:06|Opened Custom Search Function
+2025-04-30|07:49:10|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|07:54:09|App Launched
+2025-04-30|07:54:16|Opened Account Ledger Screen
+2025-04-30|07:54:16|Opened Ledger Screen
+2025-04-30|07:54:17|Opened Reports Screen
+2025-04-30|07:54:17|Opened Reports Screen
+2025-04-30|07:54:17|Opened Custom Search Screen
+2025-04-30|07:54:17|Opened Custom Search Function
+2025-04-30|07:54:20|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:03:27|App Launched
+2025-04-30|08:03:31|Opened Account Ledger Screen
+2025-04-30|08:03:31|Opened Ledger Screen
+2025-04-30|08:03:32|Opened Reports Screen
+2025-04-30|08:03:32|Opened Reports Screen
+2025-04-30|08:03:32|Opened Custom Search Screen
+2025-04-30|08:03:32|Opened Custom Search Function
+2025-04-30|08:03:37|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:04:01|App Launched
+2025-04-30|08:04:02|Opened Account Ledger Screen
+2025-04-30|08:04:02|Opened Ledger Screen
+2025-04-30|08:04:03|Opened Reports Screen
+2025-04-30|08:04:03|Opened Reports Screen
+2025-04-30|08:04:03|Opened Custom Search Screen
+2025-04-30|08:04:03|Opened Custom Search Function
+2025-04-30|08:04:06|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:07:06|App Launched
+2025-04-30|08:07:07|Opened Account Ledger Screen
+2025-04-30|08:07:07|Opened Ledger Screen
+2025-04-30|08:07:08|Opened Reports Screen
+2025-04-30|08:07:08|Opened Reports Screen
+2025-04-30|08:07:08|Opened Custom Search Screen
+2025-04-30|08:07:08|Opened Custom Search Function
+2025-04-30|08:07:11|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:07:48|App Launched
+2025-04-30|08:07:51|Opened Account Ledger Screen
+2025-04-30|08:07:51|Opened Ledger Screen
+2025-04-30|08:07:51|Opened Reports Screen
+2025-04-30|08:07:51|Opened Reports Screen
+2025-04-30|08:07:52|Opened Custom Search Screen
+2025-04-30|08:07:52|Opened Custom Search Function
+2025-04-30|08:07:54|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:09:12|App Launched
+2025-04-30|08:09:14|Opened Account Ledger Screen
+2025-04-30|08:09:14|Opened Ledger Screen
+2025-04-30|08:09:14|Opened Reports Screen
+2025-04-30|08:09:14|Opened Reports Screen
+2025-04-30|08:09:15|Opened Custom Search Screen
+2025-04-30|08:09:15|Opened Custom Search Function
+2025-04-30|08:09:17|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:15:17|App Launched
+2025-04-30|08:15:20|Opened Account Ledger Screen
+2025-04-30|08:15:20|Opened Ledger Screen
+2025-04-30|08:15:20|Opened Reports Screen
+2025-04-30|08:15:20|Opened Reports Screen
+2025-04-30|08:15:22|Opened Search By Vendor Screen
+2025-04-30|08:15:24|User Searched: r
+2025-04-30|08:15:35|Opened Reports Screen
+2025-04-30|08:15:36|Opened Custom Search Screen
+2025-04-30|08:15:36|Opened Custom Search Function
+2025-04-30|08:15:44|User requested transactions with: [50.0] as parameter(s).
+2025-04-30|08:19:55|App Launched
+2025-04-30|08:19:57|Opened Account Ledger Screen
+2025-04-30|08:19:57|Opened Ledger Screen
+2025-04-30|08:19:58|Opened Reports Screen
+2025-04-30|08:19:58|Opened Reports Screen
+2025-04-30|08:20:00|Opened Custom Search Screen
+2025-04-30|08:20:00|Opened Custom Search Function
+2025-04-30|08:20:04|User requested transactions with: [50.0] as parameter(s).
+2025-04-30|08:20:52|App Launched
+2025-04-30|08:20:53|Opened Account Ledger Screen
+2025-04-30|08:20:53|Opened Ledger Screen
+2025-04-30|08:20:55|Opened Reports Screen
+2025-04-30|08:20:55|Opened Reports Screen
+2025-04-30|08:20:56|Opened Custom Search Screen
+2025-04-30|08:20:56|Opened Custom Search Function
+2025-04-30|08:21:00|User requested transactions with: [45.0] as parameter(s).
+2025-04-30|08:25:51|App Launched
+2025-04-30|08:25:53|Opened Account Ledger Screen
+2025-04-30|08:25:53|Opened Ledger Screen
+2025-04-30|08:25:54|Opened Reports Screen
+2025-04-30|08:25:54|Opened Reports Screen
+2025-04-30|08:25:56|Opened Custom Search Screen
+2025-04-30|08:25:56|Opened Custom Search Function
+2025-04-30|08:26:03|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|08:49:28|App Launched
+2025-05-01|08:49:32|Opened Account Ledger Screen
+2025-05-01|08:49:32|Opened Ledger Screen
+2025-05-01|08:49:33|Opened Reports Screen
+2025-05-01|08:49:33|Opened Reports Screen
+2025-05-01|08:49:34|Opened Custom Search Screen
+2025-05-01|08:49:34|Opened Custom Search Function
+2025-05-01|08:49:40|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|08:50:19|App Launched
+2025-05-01|08:51:08|Opened Account Ledger Screen
+2025-05-01|08:51:08|Opened Ledger Screen
+2025-05-01|08:51:09|Opened Reports Screen
+2025-05-01|08:51:09|Opened Reports Screen
+2025-05-01|08:51:09|Opened Custom Search Screen
+2025-05-01|08:51:09|Opened Custom Search Function
+2025-05-01|08:51:14|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|08:52:40|App Launched
+2025-05-01|08:52:42|Opened Account Ledger Screen
+2025-05-01|08:52:42|Opened Ledger Screen
+2025-05-01|08:52:42|Opened Reports Screen
+2025-05-01|08:52:42|Opened Reports Screen
+2025-05-01|08:52:43|Opened Custom Search Screen
+2025-05-01|08:52:43|Opened Custom Search Function
+2025-05-01|08:52:45|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|08:55:14|App Launched
+2025-05-01|08:55:15|Opened Account Ledger Screen
+2025-05-01|08:55:15|Opened Ledger Screen
+2025-05-01|08:55:16|Opened Reports Screen
+2025-05-01|08:55:16|Opened Reports Screen
+2025-05-01|08:55:16|Opened Search By Vendor Screen
+2025-05-01|08:55:17|User Searched: 6
+2025-05-01|08:55:19|Opened Reports Screen
+2025-05-01|08:55:21|Opened Custom Search Screen
+2025-05-01|08:55:21|Opened Custom Search Function
+2025-05-01|08:55:24|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|08:57:15|App Launched
+2025-05-01|08:57:17|Opened Account Ledger Screen
+2025-05-01|08:57:17|Opened Ledger Screen
+2025-05-01|08:57:17|Opened Reports Screen
+2025-05-01|08:57:17|Opened Reports Screen
+2025-05-01|08:57:18|Opened Custom Search Screen
+2025-05-01|08:57:18|Opened Custom Search Function
+2025-05-01|08:57:20|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|08:58:26|App Launched
+2025-05-01|08:58:28|Opened Account Ledger Screen
+2025-05-01|08:58:28|Opened Ledger Screen
+2025-05-01|08:58:29|Opened Reports Screen
+2025-05-01|08:58:29|Opened Reports Screen
+2025-05-01|08:58:29|Opened Custom Search Screen
+2025-05-01|08:58:29|Opened Custom Search Function
+2025-05-01|08:58:31|User requested transactions with: [45.0] as parameter(s).
+2025-05-01|09:04:35|App Launched
+2025-05-01|09:04:39|Opened Account Ledger Screen
+2025-05-01|09:04:39|Opened Ledger Screen
+2025-05-01|09:04:40|Opened Reports Screen
+2025-05-01|09:04:40|Opened Reports Screen
+2025-05-01|09:04:42|Opened Custom Search Screen
+2025-05-01|09:04:42|Opened Custom Search Function
+2025-05-01|09:05:06|User requested transactions with: [2022-01-01], [2022-12-31], [O],  as parameter(s).
+2025-05-01|09:06:37|Returned To Ledger Menu From Custom Search Screen
+2025-05-01|09:06:37|Opened Ledger Screen
+2025-05-01|09:06:37|Opened Reports Screen
+2025-05-01|09:06:37|Opened Reports Screen
+2025-05-01|09:06:41|Returned To Main Menu
+2025-05-01|09:06:43|App Close By User

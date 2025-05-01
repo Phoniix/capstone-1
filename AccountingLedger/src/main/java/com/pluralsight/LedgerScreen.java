@@ -18,7 +18,7 @@ public class LedgerScreen {
                     "What service do you need?\n\n" +
                     "(A) Display ALl Activity\n" +
                     "(D) Display All Deposits\n" +
-                    "(P) Display All Payments\n" +
+                    "(P) Display All Payments\n\n" +
                     "(R) Search by Report/Custom Search\n" +
                     "(0) Return To Main Menu\n" +
                     "(X) Exit");
