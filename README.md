@@ -54,4 +54,4 @@ Examples of this being used.
 
 
 Here is an example of how I used this.
-![Img of example of CurrentBalance] (https://github.com/Phoniix/capstone-1/blob/master/Screenshot_43.png)
+![Img of example of CurrentBalance](https://github.com/Phoniix/capstone-1/blob/master/Screenshot_43.png)
