@@ -437,7 +437,7 @@ public class AccountingLedger {
         boolean somethingEntered = false;
         while (!somethingEntered) {
             titleNewLineTop();
-            System.out.println("Your Current Account Balance Is: " + currentBalance(scanner));
+            System.out.println("Your Current Account Balance Is: $" + currentBalance(scanner));
             System.out.println("Would you like to make a deposit?\n" +
                     "Enter deposit amount to enter 0 to return to menu.\n" +
                     "Or press (X) to close the app\n" +
@@ -459,7 +459,7 @@ public class AccountingLedger {
         boolean somethingEntered = false;
         while (!somethingEntered) {
             titleNewLineTop();
-            System.out.println("Your Current Account Balance Is: " + currentBalance(scanner));
+            System.out.println("Your Current Account Balance Is: $" + currentBalance(scanner));
             System.out.println("Enter deposit amount.");
             titleLineBottom();
             System.out.print("\n\nEnter:  ");
