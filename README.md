@@ -23,6 +23,11 @@ Reports Screen - Invalid Input (Same For All Screens)
 Reports Screen – Empty Input (Same for all Screens)
 ![Img of Reports Screen with empty input](https://github.com/Phoniix/capstone-1/blob/master/Screenshot_38.png)
 
+Custom Search Screen - Section where user can perform a custom search - sub function of reports screen
+![Img of Custom search screen])(https://github.com/Phoniix/capstone-1/blob/master/Screenshot_1.png)
+![Img of custom search being used] (https://github.com/Phoniix/capstone-1/blob/master/Screenshot_2.png)
+![Img of custom search being used](https://github.com/Phoniix/capstone-1/blob/master/Screenshot_3.png)
+
 
 Interesting Code Section -----------------------------------------------------------------------------------
 Result Helper Class – Allows me to check user input for returning to main menu or exiting the program.
