@@ -496,8 +496,7 @@ public class AccountingLedger {
 
             titleNewLineTop();
             System.out.println("Is this money coming from a company? Or a personal deposit.\n" +
-                    "Enter the name of the company or simply enter (P) for a Personal Deposit\n" +
-                    promptUser());
+                    "Enter the name of the company or simply enter (P) for a Personal Deposit");
             titleLineBottom();
             System.out.print("\n\nEnter:  ");
             vendorInput = scanner.nextLine().trim().replaceAll("\\s+", " ");
