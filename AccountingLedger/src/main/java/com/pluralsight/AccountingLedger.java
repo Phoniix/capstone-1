@@ -9,7 +9,6 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 import static com.pluralsight.LedgerScreen.ledgerScreen;
@@ -20,7 +19,7 @@ public class AccountingLedger {
     public static void main(String[] args) throws InterruptedException, NumberFormatException, IOException {
         activityLogger("App Launched");
         allTransactions();
-        char function = 'z';
+        char function;
         Scanner scanner = new Scanner(System.in);
         ResultHelper welcome = welcomeScreen(scanner); function = welcome.getFunction();
         boolean keepGoing = true;
@@ -38,27 +37,22 @@ public class AccountingLedger {
             }
             //------------------------------------------//
                 if (function == 'D') {
-                    activityLogger("Opened Deposit Menu");
+                    activityLogger("Opened Make Deposit Function");
                     ResultHelper makeDeposit = makeDeposit(scanner);
                     if (programQuitter(makeDeposit)) {function = makeDeposit.getFunction();}
                     if (!programQuitter(makeDeposit)) {function = makeDeposit.getFunction();}
                 } else if (function == 'P') {
-                    activityLogger("Opened Payment Menu");
+                    activityLogger("Opened Make Payment Function");
                     ResultHelper makePayment = makePayment(scanner);
                     if (programQuitter(makePayment)) {function = makePayment.getFunction();}
                     if (!programQuitter(makePayment)) {function = makePayment.getFunction();}
                 } else if (function == 'L') {
                     activityLogger("Opened Account Ledger Screen");
-                        ResultHelper ledger = ledgerScreen(scanner);
-                        if (programQuitter(ledger)) {function = ledger.getFunction();}
-                        if (!programQuitter(ledger)) {function = ledger.getFunction();}
-                } else if (function == 'R') {
-                    activityLogger("Opened Reports Screen");
-                    ResultHelper reports = reportsScreen(scanner);
-                    if (programQuitter(reports)) {function = reports.getFunction();}
-                    if (!programQuitter(reports)) {function = reports.getFunction();}
+                    ResultHelper ledger = ledgerScreen(scanner);
+                    if (programQuitter(ledger)) {function = ledger.getFunction();}
+                    if (!programQuitter(ledger)) {function = ledger.getFunction();}
                 } else if (function == 'X') {
-
+                // Only here to process quit functionality from home screen/welcome screen
                 } else {
                     System.out.println("\nInvalid Input. CHECK");
                 }
@@ -138,20 +132,20 @@ public class AccountingLedger {
 
     // Functions // ---------------------------------------------------------------------------------------------------
     public static ResultHelper makeDeposit (Scanner scanner) throws NumberFormatException, InterruptedException, IOException {
-        double transactionAmnt = 0;
+        double transactionAMNT = 0;
         boolean keepGoing = true;
         while (keepGoing) {
 
             String transactionInput = getAmount(scanner);
             ResultHelper transInput = allowUserToExitOrReturn(transactionInput); if (returner(transInput)) {return transInput;}
-            double transactionAMNT = convertStringToDouble(transactionInput);
+            transactionAMNT = convertStringToDouble(transactionInput);
             if (transactionAMNT == 0) {continue;}
 
             timer(750);
             boolean descDone = false;
             String finalDesc = "";
             while (!descDone) {
-                String descInput = getDescription(scanner);
+                String descInput = getDescriptionInput(scanner);
                 ResultHelper desc = allowUserToExitOrReturn(descInput); if (returner(desc)) {return desc;}
 
                 if (descInput.length() <= 300) {
@@ -175,7 +169,7 @@ public class AccountingLedger {
 
             boolean confirmTransaction = false;
             while (!confirmTransaction) {
-                String userConfirmInput = confirmPayment(scanner, transactionAmnt, finalDesc, vendor);
+                String userConfirmInput = confirmPayment(scanner, transactionAMNT, finalDesc, vendor);
                 ResultHelper uci = allowUserToExitOrReturn(userConfirmInput); if (returner(uci)) {return uci;}
                 char userConfirm = userConfirmInput.toUpperCase().charAt(0);
 
@@ -186,18 +180,18 @@ public class AccountingLedger {
                     timer1000();
                     boolean confirmInfo = false;
                     while (!confirmInfo) {
-                        char pickPart = changePaymentInfo(scanner, transactionAmnt, finalDesc, vendor);
+                        char pickPart = changePaymentInfo(scanner, transactionAMNT, finalDesc, vendor);
 
                         if (pickPart == '1') {
                             transactionInput = changeAmount(scanner);
                             try {
-                                transactionAmnt = Double.parseDouble(transactionInput);
+                                transactionAMNT = Double.parseDouble(transactionInput);
                             } catch (NumberFormatException ignored) {continue;}
                             break;
                         } else if (pickPart == '2') {
                             boolean reEnterDesc = false;
                             while (!reEnterDesc) {
-                               String descInput = getDescription(scanner);
+                               String descInput = getDescriptionInput(scanner);
                                 if (descInput.length() <= 300) {
                                     finalDesc = autoLineBreakAt100UpTo300(descInput);
                                     break;
@@ -224,7 +218,7 @@ public class AccountingLedger {
                 }
             } // TC Loop End // ---------------------------------------------------------------------------------------
 
-            transactionLogger(transactionAmnt, finalDesc, vendor);
+            transactionLogger(transactionAMNT, finalDesc, vendor);
             activityLogger("User Made Deposit Of: $" + transactionAMNT + " For: " + finalDesc + " Vendor: " + vendor);
             timer1500();
             char userConfirm = newTransaction(scanner);
@@ -263,7 +257,7 @@ public class AccountingLedger {
             boolean descDone = false;
             String finalDesc = "";
             while (!descDone) {
-                String descInput = getDescription(scanner);
+                String descInput = getDescriptionInput(scanner);
                 ResultHelper desc = allowUserToExitOrReturn(descInput); if (returner(desc)) {return desc;}
 
                 if (descInput.length() <= 300) {
@@ -310,7 +304,7 @@ public class AccountingLedger {
                         } else if (pickPart == '2') {
                             boolean reEnterDesc = false;
                             while (!reEnterDesc) {
-                                String descInput = getDescription(scanner);
+                                String descInput = getDescriptionInput(scanner);
                                 if (descInput.length() <= 300) {
                                     finalDesc = autoLineBreakAt100UpTo300(descInput);
                                     break;
@@ -478,7 +472,7 @@ public class AccountingLedger {
         }
         return transactionInput;
     }
-    public static String getDescription (Scanner scanner) {
+    public static String getDescriptionInput(Scanner scanner) {
         boolean somethingEntered = false;
         String descInput = "";
         while (!somethingEntered) {
@@ -524,6 +518,7 @@ public class AccountingLedger {
             System.out.println("\nIs this info correct? (Y) or (N)\n" +
                     "(Y)es or (N)o?\n" +
                     promptUser());
+            System.out.print("\n\nEnter:  ");
             userConfirmInput = scanner.nextLine().trim().replaceAll("\\s+", "");
             if (checkIfEmpty(userConfirmInput)) {thisFieldCantBeEmpty();continue;}
             somethingEntered = true;
@@ -588,7 +583,7 @@ public class AccountingLedger {
                 System.out.println("\nInvalid Input. Please choose from listed options.");
             }
         }
-        return new ResultHelper('0', true);
+        return null;
     }
     public static char newTransaction (Scanner scanner) {
         titleNewLineTop();
@@ -677,12 +672,12 @@ public class AccountingLedger {
 
     // Next project //
     // USE A FREAKING PROJECT BOARD
-    // Make whole menu into one or more methods // more specifically the return to menu call // I like----
+    // Make whole menu into one or more methods // more specifically the return to menu call // I like----/
     //---- the methods as the class head, until otherwise not needed.
     // Make more methods, think ahead
     // Use more classes for items that need it (things that can rely on mulitple factors)
     // Use T.O.D.O's
-    // Try Enums for menu's
+    // Try Enums for menus
     // Always use an activity logger
     // Make an importable design utility class
 

@@ -49,7 +49,7 @@ public class LedgerScreen {
 
             }
         }
-        return new ResultHelper('z', true);
+        return null;
     }
 
     // Functions // ---------------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ public class LedgerScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     public static ResultHelper displayDepositTransactions (Scanner scanner) throws IOException, InterruptedException {
@@ -95,7 +95,7 @@ public class LedgerScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your deposit transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     public static ResultHelper displayPaymentTransactions (Scanner scanner) throws IOException, InterruptedException {
@@ -120,7 +120,7 @@ public class LedgerScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your payment transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     //Back End // -----------------------------------------------------------------------------------------------------

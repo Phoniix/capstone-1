@@ -4,7 +4,6 @@ package com.pluralsight;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import static com.pluralsight.AccountingLedger.*;
@@ -37,14 +36,16 @@ public class CustomSearch {
 
             char userSelection = userSelectionInput.toUpperCase().charAt(0);
             if (userSelection == 'L') {
-                activityLogger("Returned To Ledger Menu From Custom Search Screen");
+                activityLogger("Returned To Ledger Menu From Custom Search Screen Menu");
                 ResultHelper ledger = LedgerScreen.ledgerScreen(scanner);
                 if (returner(ledger)) {return ledger;}
             } if (userSelection == 'R') {
+                activityLogger("Returned to Reports Menu From Custom Search Screen Menu");
                 ResultHelper reports = reportsScreen(scanner);
                 if (returner(reports)) {return reports;}
             }
 
+            // Variables Declared, all must have some value for search to work (even if value is 0/null) --------------
             String filters = combineFilters(userSelectionInput);
             LocalDate startDate = null;
             LocalDate endDate = null;
@@ -52,29 +53,13 @@ public class CustomSearch {
             String vendor = "";
             double transactionAMNT = 0;
 
-            if (filters.contains("1")) {
-                startDate = promptForDate(scanner, "Start Date", "after this date");
-            } if (filters.contains("2")) {
-                endDate = promptForDate(scanner, "End Date", "before this date");
-            } if (filters.contains("3")) {
-                description = promptForString(scanner, "Description", "including this description");
-            } if (filters.contains("4")) {
-                vendor = promptForString(scanner, "Vendor", "including this vendor name");
-            } if (filters.contains("5")) {
-               transactionAMNT = promptForDouble(scanner, "Amount", "that has this exact amount");
-            }
+            // After getting filters, will ask user to complete fields based on desired search filters ----------------
+            customSearchMethod(scanner, filters, startDate, endDate, description, vendor, transactionAMNT);
 
-            activityLogger("User requested transactions with: " +
-                    (!dateLog(startDate).isEmpty() ? "[" + dateLog(startDate) + "], " : "") +
-                    (!dateLog(endDate).isEmpty() ? "[" + dateLog(endDate) + "], " : "")  +
-                    (!description.isEmpty() ? "[" + description + "], " : "") +
-                    (!vendor.isEmpty() ? "[" + vendor + "], ": "") +
-                    (!doubleLog(transactionAMNT).isEmpty() ? "[" + transactionAMNT + "]" : "") +
-                    " as parameter(s).");
-
-            searchLoop(startDate, endDate, description, vendor, transactionAMNT); // Searches based on user selected inputted parameters
-
+            // After search runs, will ask user to search again // ----------------------------------------------------
             keepGoing = askUserToSearchAgain(scanner);
+
+            //If another search or not // -----------------------------------------------------------------------------
             if (keepGoing) {activityLogger("User started another search."); continue;}
             if (!keepGoing) {
                 ResultHelper lastCall = screenChange(scanner, "Thank you for using account Ledger App!");
@@ -109,7 +94,7 @@ public class CustomSearch {
                     "Transactions " + action + " will be displayed.");
             titleLineBottom();
             System.out.print("\n\nEnter:  ");
-            userInput = scanner.nextLine().trim().replaceAll("\\s+", "");
+            userInput = scanner.nextLine().trim().replaceAll("\\s+", " ");
             if (checkIfEmpty(userInput)) {thisFieldCantBeEmpty();continue;}
             somethingEntered = true;
         }
@@ -217,8 +202,8 @@ public class CustomSearch {
         int lineCounter = 0;
         System.out.println();
         for (String line : allTransactions()) {
+            timer(150);
             boolean showTransaction = true;
-
             String [] lineParts = line.split("\\|");
             if (lineParts.length >= 5) {
                 LocalDate fileDate = convertStringToDate(lineParts[0]);
@@ -244,9 +229,9 @@ public class CustomSearch {
             }
         }
         if (found) {
-            activityLogger("Displayed [" + lineCounter + "] from parameters");
+            activityLogger("Displayed [" + lineCounter + "] result(s) from parameters");
             titleNewLineTop();
-            System.out.println("We found searches matching your input!");
+            System.out.println("We found [" + lineCounter + "] searche(s) matching your input!");
             titleLineBottom();
         }
 
@@ -256,5 +241,28 @@ public class CustomSearch {
             activityLogger("No results found for parameters.");
             titleNewLineTop();
         }
+    }
+    public static void customSearchMethod(Scanner scanner, String filters, LocalDate startDate, LocalDate endDate, String description, String vendor, double transactionAMNT) throws InterruptedException, IOException {
+        if (filters.contains("1")) {
+            startDate = promptForDate(scanner, "Start Date", "after this date");
+        } if (filters.contains("2")) {
+            endDate = promptForDate(scanner, "End Date", "before this date");
+        } if (filters.contains("3")) {
+            description = promptForString(scanner, "Description", "including this description");
+        } if (filters.contains("4")) {
+            vendor = promptForString(scanner, "Vendor", "including this vendor name");
+        } if (filters.contains("5")) {
+            transactionAMNT = promptForDouble(scanner, "Amount", "that has this exact amount");
+        }
+
+        activityLogger("User requested transactions with: " +
+                (!dateLog(startDate).isEmpty() ? "[" + dateLog(startDate) + "], " : "") +
+                (!dateLog(endDate).isEmpty() ? "[" + dateLog(endDate) + "], " : "")  +
+                (!description.isEmpty() ? "[" + description + "], " : "") +
+                (!vendor.isEmpty() ? "[" + vendor + "], ": "") +
+                (!doubleLog(transactionAMNT).isEmpty() ? "[" + transactionAMNT + "]" : "") +
+                " as parameter(s).");
+
+        searchLoop(startDate, endDate, description, vendor, transactionAMNT); // Searches based on user selected inputted parameters
     }
 }

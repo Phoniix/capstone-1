@@ -95,7 +95,7 @@ public class ReportsScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your (MTD) Month to Date transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     public static ResultHelper previousMonth (Scanner scanner) throws IOException, InterruptedException {
@@ -124,7 +124,7 @@ public class ReportsScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your (PM) Previous Month's transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     public static ResultHelper yearToDate (Scanner scanner) throws IOException, InterruptedException {
@@ -153,7 +153,7 @@ public class ReportsScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your (YTD) Year to Date transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     public static ResultHelper previousYear (Scanner scanner) throws IOException, InterruptedException {
@@ -186,7 +186,7 @@ public class ReportsScreen {
         ResultHelper changeScreen = screenChange(userInput, "Here are all of your (PY) Previous Year's transactions!");
         if (returner(changeScreen)) {return changeScreen;}
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     public static ResultHelper searchByVendor (Scanner scanner) throws IOException, InterruptedException {
@@ -230,7 +230,7 @@ public class ReportsScreen {
             if (returner(changeScreen)) {return changeScreen;}
         }
 
-        return new ResultHelper('0', true);
+        return null;
     }
 
     // Back End // ----------------------------------------------------------------------------------------------------
